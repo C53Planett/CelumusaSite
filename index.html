@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celumusa Shezi Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/324e4eb168.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container" style="display: block; ">
+            <nav style="margin-top: 0;">
+                <div class="logo">CELUMUSA.</div>
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">CRAFT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="images/Update CV.pdf" download >HIRE ME</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text" id="home" style="display: block; text-align: center;">
+                <div class="water_drop">               
+                   <h3 style=" font-weight: 500; color: rgb(48, 47, 47);     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                      CELUMUSA SHEZI
+                   </h3>
+                </div>
+                <p>Front-End Developer</p>
+            </div>
+        </div>
+    </div>
+    <!---------------About-------------->
+  
+    <section class id="about">
+      <h1 class="sub-titles">ABOUT</h1> 
+      <div class="row">
+        <div class="about-col-1">
+            <img src="images/Profile Pic.jpg">
+        </div>
+        <div class="about-col-2">
+          <p>
+                    Hi! I'm a passionate software developer with expertise in building scalable applications and automating workflows using Azure DevOps. 
+                    I love solving challenging problems and continuously learning new technologies.                
+          </p>
+          <div class="tab">
+            <p class="tablinks defaultOpen" onclick="openTab(event, 'Tab1')"id="defaultOpen">PROFILE</p>
+            <p class="tablinks" onclick="openTab(event, 'Tab2')">EDUCATION</p>
+            <p class="tablinks" onclick="openTab(event, 'Tab3')">SKILLS</p>
+          </div>
+                
+            
+          <div id="Tab1" class="tabcontent">
+            <ul>
+            <li><span>Full Name</span><br>Celumusa Shezi</li>
+            <li><span>Location</span><br>Tembisa, Gauteng, South Africa</li>
+            </ul>
+          </div>
+                
+                <div id="Tab2" class="tabcontent">
+                    <ul>
+                        <li><span>2023</span><br>Dip ICT: Application Development</li>
+                        <li><span>2018</span><br>National Senior Certicate: Matric</li>
+                    </ul>
+                </div>
+                
+                <div id="Tab3" class="tabcontent">
+                    <ul>
+                        <li><span>Technical Skills</span><br> <i class="fa-brands fa-html5"></i> HTML, <i class="fa-brands fa-css"></i> CSS, <i class="fa-brands fa-js"></i> JavaScript, <i class="fa-brands fa-python"></i> Python</li>
+                        <li><span>Soft Skills</span><br> <i class="fa-solid fa-square-check"></i> Collaboration, <i class="fa-solid fa-square-check"></i> Communication, <i class="fa-solid fa-square-check"></i> Problem Solving .etc</li>
+
+                    </ul>
+                </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-------------------------Portfolio------------------------->
+
+      <section class="portfolio" id="portfolio">
+        <h1 class="sub-titles">CRAFT</h1>
+        <p class="portfolio-intro">
+          Here are some of the projects I've worked on, showcasing my skills in software development and cloud engineering.
+        </p>
+        <div class="projects">
+          <!-- Project 1 -->
+          <div class="project">
+            <img src="images/Project1.png" class="project-image">
+            <h2 class="project-title">PROJECT ONE: Celumusa Site</h2>
+            <p class="project-description">
+             Built a website showcasing my portfolio, skills, and projects. Features a responsive design, and clean aesthetics.            </p>
+            <p class="project-details">Role: Front-End Developer | Tools: Visual Studio Code, JavaScript, HTML and CSS, GitHub</p>
+            <div class="project-links">
+              <a href="https://c53planett.github.io/CelumusaSite/" class="btn btn2">Live Demo</a>
+              <a href="https://github.com/C53Planett/CelumusaSite" class="btn btn2">GitHub Repo</a>
+            </div>
+          </div>
+          
+
+        </div>
+        <p class="portfolio-cta">Interested in learning more? <a href="#contact">Contact me!</a></p>
+      </section>
+    
+
+    <!-------------------------Contact-------------------------->
+
+
+    <section class="contact" id="contact">
+        <h1 class="sub-titles">REACH OUT</h1>
+        <p class="contact-intro">
+          Feel free to reach out for collaborations, questions, or just to say hi!
+        </p>
+        <a href="images/Update CV.pdf" download class="btn btn2">Download CV</a>
+
+        <!-- Contact Details -->
+        
+        <div class="social-icons">
+          <a href="mailto: celumusaofficial@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/c-shezi53/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/C53Planett" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+      </section>
+    <div class="copyright">
+      
+        <p>© 2024 All Rights Reserved <span>C</span>ELUMUSA. <br> Created with <i class="fa-solid fa-heart"></i> and lot of Coffee(3 sugars, black!) by Celumusa Shezi.</p>
+    </div>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu(){
+        sidemenu.style.right ="0";
+      }
+      function closemenu(){
+        sidemenu.style.right ="-200px";
+      }
+      
+    </script>
+
+    <script>
+      function openTab(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+    
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    
+      // Automatically open the first tab when the page loads
+      document.getElementById("defaultOpen").click();
+    </script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxjORoC9rWAgZW1SNbJ2dZhOkbLbeKAGXsfkJFeSdyAsfFVENbQ7nrX5KbW2luBY69y/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML ="Message sent!!"
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+  
+</body>
+
+</html>
